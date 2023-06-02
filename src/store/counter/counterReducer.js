@@ -1,12 +1,14 @@
+import { INCREASE, DICREASE } from "./counterTypes";
+
 const initialState = {
   number: 0,
 };
 
 export const counterReducer = (state = initialState, action) => {
   switch (action.type) {
-    case 'increase':
+    case INCREASE:
       return { ...state, number: state.number + 1 };
-    case 'dicrease':
+    case DICREASE:
       return { ...state, number: state.number - 1 };
     default:
       return state;

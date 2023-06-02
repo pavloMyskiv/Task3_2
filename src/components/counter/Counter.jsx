@@ -2,10 +2,12 @@ import { useSelector, useDispatch } from 'react-redux';
 import {
   increaseAction,
   dicreaseAction,
-} from '../store/actions/counterActions';
+} from '../../store/counter/counterActions';
+import './Counter.css';
 
 export const Counter = () => {
   const dispatch = useDispatch();
+  const number = useSelector((state) => state.number);
 
   const increase = () => {
     dispatch(increaseAction());
@@ -17,7 +19,7 @@ export const Counter = () => {
   return (
     <div className="counter">
       <button onClick={increase}>plus</button>
-      <p>{useSelector((state) => state.number)}</p>
+      <p>{number}</p>
       <button onClick={dicrease}>minus</button>
     </div>
   );

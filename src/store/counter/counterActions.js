@@ -1,11 +1,13 @@
+import { INCREASE, DICREASE } from "./counterTypes";
+
 const increaseAction = () => {
   return {
-    type: 'increase',
+    type: INCREASE,
   };
 };
 const dicreaseAction = () => {
   return {
-    type: 'dicrease',
+    type: DICREASE,
   };
 };
 
